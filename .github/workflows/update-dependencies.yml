@@ -11,9 +11,9 @@ env:
 # When to run this GitHub Action
 on:
   # Run when changes pushed to main branch (Uncomment for debugging)
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   schedule:
     # Run every day at midnight UTC
     # Note: During peak load times, GitHub may delay this time
