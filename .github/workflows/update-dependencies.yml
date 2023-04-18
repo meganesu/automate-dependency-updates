@@ -7,6 +7,7 @@ env:
   GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
   # The branch to commit updated dependency versions to
   BRANCH_NAME: update-deps
+  NODE_VERSION: 14
 
 # When to run this GitHub Action
 on:
@@ -31,7 +32,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: $NODE_VERSION
       - name: 'Check out branch'
         run: |
           git branch --remotes
