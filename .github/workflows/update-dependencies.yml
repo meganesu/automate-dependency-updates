@@ -7,6 +7,8 @@ env:
   GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
   # The branch to commit updated dependency versions to
   BRANCH_NAME: update-deps
+  # The version of Node to use when installing and updating dependencies
+  # Update this to match the version you use on your computer
   NODE_VERSION: 18
 
 # When to run this GitHub Action
