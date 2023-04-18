@@ -10,6 +10,10 @@ env:
   # The version of Node to use when installing and updating dependencies
   # Update this to match the version you use on your computer
   NODE_VERSION: 18
+  # The GitHub username or organization name that owns the original repo
+  # Update this if other people frequently fork this repo
+  #  (e.g., if it's a starter code repo for a dev tutorial)
+  ORIGINAL_REPO_OWNER: meganesu
 
 # When to run this GitHub Action
 on:
@@ -25,7 +29,7 @@ on:
 jobs:
   update_deps: # job name
     # Only run this GitHub Action on the original repo, not on forks
-    if: github.repository_owner == 'meganesu'
+    if: ${{ github.repository_owner == env.ORIGINAL_REPO_OWNER }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
