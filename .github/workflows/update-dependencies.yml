@@ -57,11 +57,11 @@ jobs:
             git checkout -b $BRANCH_NAME
           fi
       - name: 'Install dependencies'
-        run: |
-          npm install
+        run: npm install
       - name: 'Update dependencies'
-        run: |
-          npm update --save
+        run: npm update --save
+      - name: 'Run tests'
+        run: npm run test
       - name: 'Commit & push changes'
         run: |
           git status
