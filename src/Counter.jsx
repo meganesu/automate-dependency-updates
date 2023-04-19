@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './Counter.css'
 
-const Counter = () => {
-  const [count, setCount] = useState(0)
+const Counter = ({ initialCount = 0 }) => {
+  const [count, setCount] = useState(initialCount)
 
   return (
     <button onClick={() => { setCount(count + 1)}}>
-      This button has been clicked {count} times!
+      This button has been clicked {count} time{count !== 1 && 's'}!
     </button>
   )
 }
