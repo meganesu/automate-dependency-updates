@@ -20,7 +20,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^3.1.0",
     "jsdom": "^21.1.2",
-    "vite": "^4.4.7",
+    "vite": "^4.4.8",
     "vitest": "^0.30.1"
   }
 }
